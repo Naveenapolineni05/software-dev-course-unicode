@@ -85,16 +85,23 @@ Assign the result to a variable named swappedString.
 
 //Starter Code
 // Task 1
-let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let word = "Code";
+let firstCodePoint = word.charCodeAt(0);
+let thirdCodePoint = word.charCodeAt(2);
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108);
 
 // Task 3
-let inputString2 = "Launch";
-let swappedString; // Your code here
+let original = "Launch";
+// Get first and last characters using Unicode
+let firstChar = original.charAt(0);                    
+let lastChar = original.charAt(original.length - 1);  
+
+// Create swapped string: "hauncL"
+let middle = original.slice(1, -1);  
+let swappedString = lastChar + middle + firstChar;
+
 
 // Log all results
 console.log({
